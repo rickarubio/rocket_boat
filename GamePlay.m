@@ -20,6 +20,13 @@ static const CGFloat scrollSpeed = 50.f;
 
 - (void) didLoadFromCCB {
     _oceans = @[_ocean1, _ocean2];
+    // enable touch interactions
+    self.userInteractionEnabled = TRUE;
+}
+
+// propel the ship forward with each tap
+- (void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
+    [_playerShip.physicsBody applyImpulse:ccp(0, 200.f)];
 }
 
 - (void)update:(CCTime)delta {
