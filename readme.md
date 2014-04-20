@@ -19,3 +19,5 @@ Built for the MakeGamesWithUS Game Development Hackathon, hosted by Apportable A
 [SpriteBuilder](http://www.spritebuilder.com/)  
 
 [Cocos2D](http://www.cocos2d-iphone.org/)
+
+[8-bit Keygen Music](https://soundcloud.com/keygen-music/sets/razor1911-nhl-07-keygen-music)

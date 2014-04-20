@@ -13,6 +13,11 @@
     
 }
 
+- (void) didLoadFromCCB {
+    OALSimpleAudio *audio = [OALSimpleAudio sharedInstance];
+    [audio playBg:@"8bit.mp3" loop:TRUE];
+}
+
 - (void)startGame {
     _startGame.visible = FALSE;
     CCScene *gameplayScene = [CCBReader loadAsScene:@"GamePlay"];
