@@ -319,7 +319,7 @@
 						<key>customClass</key>
 						<string></string>
 						<key>displayName</key>
-						<string>CCBFile</string>
+						<string>playerShip</string>
 						<key>memberVarAssignmentName</key>
 						<string>_playerShip</string>
 						<key>memberVarAssignmentType</key>
@@ -327,7 +327,7 @@
 						<key>physicsBody</key>
 						<dict>
 							<key>affectedByGravity</key>
-							<false/>
+							<true/>
 							<key>allowsRotation</key>
 							<true/>
 							<key>bodyShape</key>
@@ -408,6 +408,8 @@
 								<string>playerShip.ccb</string>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>

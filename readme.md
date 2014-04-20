@@ -21,3 +21,5 @@ Built for the MakeGamesWithUS Game Development Hackathon, hosted by Apportable A
 [Cocos2D](http://www.cocos2d-iphone.org/)
 
 [8-bit Keygen Music](https://soundcloud.com/keygen-music/sets/razor1911-nhl-07-keygen-music)
+
+[iOS Simulator Guide](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/iOS_Simulator_Guide/InteractingwiththeiOSSimulator/InteractingwiththeiOSSimulator.html)
