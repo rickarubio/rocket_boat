@@ -10,6 +10,7 @@
 
 @implementation MainScene {
     CCButton *_startGame;
+    
 }
 
 - (void)startGame {
