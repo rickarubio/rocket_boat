@@ -12,10 +12,12 @@ static const CGFloat scrollSpeed = 80.f;
 
 @implementation GamePlay {
     CCSprite *_playerShip;
+    CCPhysicsNode *_physicsNode;
 }
 
 - (void)update:(CCTime)delta {
     _playerShip.position = ccp(_playerShip.position.x, _playerShip.position.y + delta * scrollSpeed);
+    _physicsNode.position = ccp(_physicsNode.position.x, _physicsNode.position.y - (scrollSpeed * delta));
 }
 
 @end
