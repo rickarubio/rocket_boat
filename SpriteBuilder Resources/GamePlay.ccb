@@ -379,7 +379,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>161</real>
+									<real>275</real>
 									<real>75</real>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -408,8 +408,6 @@
 								<string>playerShip.ccb</string>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>

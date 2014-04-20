@@ -9,6 +9,8 @@
 #import "GamePlay.h"
 
 static const CGFloat scrollSpeed = 50.f;
+static CGFloat firstEnemyYPosition = 0.f;
+static const CGFloat distanceBetweenEnemies = 300.f;
 
 @implementation GamePlay {
     CCSprite *_playerShip;
@@ -16,12 +18,28 @@ static const CGFloat scrollSpeed = 50.f;
     CCNode *_ocean1;
     CCNode *_ocean2;
     NSArray *_oceans;
+    NSMutableArray *_enemyShips;
+}
+
+- (void)spawnEnemyShip {
+    CCNode *previousEnemyShip = [_enemyShips lastObject];
+    CGFloat previousEnemyYPosition = previousEnemyShip.position.y;
+    if (!previousEnemyShip) {
+        previousEnemyYPosition = firstEnemyYPosition;
+    }
+    CCNode *enemyShip = [CCBReader load:@"leftEnemy"];
+    enemyShip.position = ccp(0, previousEnemyYPosition + distanceBetweenEnemies);
+    [_physicsNode addChild:enemyShip];
+    [_enemyShips addObject:enemyShip];
 }
 
 - (void) didLoadFromCCB {
     _oceans = @[_ocean1, _ocean2];
     // enable touch interactions
     self.userInteractionEnabled = TRUE;
+    // spawn enemy ship
+    _enemyShips = [NSMutableArray array];
+    [self spawnEnemyShip];
 }
 
 // propel the ship forward with each tap
@@ -49,5 +67,27 @@ static const CGFloat scrollSpeed = 50.f;
     // clamp forwards velocity of the ship, backwards velocity tied to scrollSpeed
     float yVelocity = clampf(_playerShip.physicsBody.velocity.y, -1 * scrollSpeed, scrollSpeed * 2);
     _playerShip.physicsBody.velocity = ccp(0, yVelocity);
+    
+    // spawn enemy ships after previous enemies leaves the screen
+    NSMutableArray *offScreenEnemies = nil;
+    for (CCNode *enemy in _enemyShips) {
+        CGPoint enemyWorldPosition = [_physicsNode convertToWorldSpace:enemy.position];
+        CGPoint enemyScreenPosition = [self convertToNodeSpace:enemyWorldPosition];
+        if (enemyScreenPosition.y <= -1 * enemy.contentSize.height) {
+            if (!offScreenEnemies) {
+                offScreenEnemies = [NSMutableArray array];
+            }
+            [offScreenEnemies addObject:enemy];
+        }
+        // update location of next enemy ship
+        firstEnemyYPosition = enemy.position.y + 700;
+    }
+    // delete the enemy that went off screen
+    for (CCNode *enemyToRemove in offScreenEnemies) {
+        [enemyToRemove removeFromParent];
+        [_enemyShips removeObject:enemyToRemove];
+        // for each removed obstacle, add a new one
+        [self spawnEnemyShip];
+    }
 }
 @end

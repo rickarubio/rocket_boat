@@ -15,7 +15,7 @@
 
 - (void) didLoadFromCCB {
     OALSimpleAudio *audio = [OALSimpleAudio sharedInstance];
-    [audio playBg:@"8bit.mp3" loop:TRUE];
+    [audio playBg:@"ocremix.mp3" loop:TRUE];
 }
 
 - (void)startGame {

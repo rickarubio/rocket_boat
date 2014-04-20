@@ -20,6 +20,8 @@ Built for the MakeGamesWithUS Game Development Hackathon, hosted by Apportable A
 
 [Cocos2D](http://www.cocos2d-iphone.org/)
 
-[8-bit Keygen Music](https://soundcloud.com/keygen-music/sets/razor1911-nhl-07-keygen-music)
+[OCRemix](http://ocremix.org/remix/OCR02807)
 
 [iOS Simulator Guide](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/iOS_Simulator_Guide/InteractingwiththeiOSSimulator/InteractingwiththeiOSSimulator.html)
+
+[Learn about Gesture Recognizers (ie: detect left/right swipes)](https://www.makegameswith.us/gamernews/387/build-your-own-2048-with-spritebuilder-and-cocos2d)
