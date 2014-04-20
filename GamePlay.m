@@ -26,7 +26,7 @@ static const CGFloat scrollSpeed = 50.f;
 
 // propel the ship forward with each tap
 - (void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
-    [_playerShip.physicsBody applyImpulse:ccp(0, 200.f)];
+    [_playerShip.physicsBody applyImpulse:ccp(0, scrollSpeed * 2)];
 }
 
 - (void)update:(CCTime)delta {
@@ -40,10 +40,14 @@ static const CGFloat scrollSpeed = 50.f;
     for (CCNode *ocean in _oceans) {
         CGPoint oceanWorldPosition = [_physicsNode convertToWorldSpace:ocean.position];
         CGPoint oceanScreenPosition = [self convertToNodeSpace:oceanWorldPosition];
-//        NSLog(@"ocean Y-coord = %f", oceanScreenPosition.y);
+        // NSLog(@"ocean Y-coord = %f", oceanScreenPosition.y);
         if (oceanScreenPosition.y <= -1 * ocean.contentSize.height) {
             ocean.position = ccp(0, ocean.position.y + (2 * ocean.contentSize.height));
         }
     }
+    
+    // clamp forwards velocity of the ship, backwards velocity tied to scrollSpeed
+    float yVelocity = clampf(_playerShip.physicsBody.velocity.y, -1 * scrollSpeed, scrollSpeed * 2);
+    _playerShip.physicsBody.velocity = ccp(0, yVelocity);
 }
 @end
