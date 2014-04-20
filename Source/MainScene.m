@@ -14,6 +14,8 @@
 
 - (void)startGame {
     _startGame.visible = FALSE;
+    CCScene *gameplayScene = [CCBReader loadAsScene:@"GamePlay"];
+    [[CCDirector sharedDirector] replaceScene: gameplayScene];
 }
 
 @end
