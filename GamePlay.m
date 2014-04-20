@@ -8,8 +8,14 @@
 
 #import "GamePlay.h"
 
-@implementation GamePlay {
+static const CGFloat scrollSpeed = 80.f;
 
+@implementation GamePlay {
+    CCSprite *_playerShip;
+}
+
+- (void)update:(CCTime)delta {
+    _playerShip.position = ccp(_playerShip.position.x, _playerShip.position.y + delta * scrollSpeed);
 }
 
 @end
