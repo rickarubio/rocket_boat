@@ -9,11 +9,7 @@
 #import "GamePlay.h"
 
 @implementation GamePlay {
-    CCButton *_helloButton;
-}
 
--(void)hello {
-    NSLog(@"FUCK YES FUCKER!");
 }
 
 @end
