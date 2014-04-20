@@ -65,7 +65,7 @@ static const CGFloat distanceBetweenEnemies = 300.f;
     }
     
     // clamp forwards velocity of the ship, backwards velocity tied to scrollSpeed
-    float yVelocity = clampf(_playerShip.physicsBody.velocity.y, -1 * scrollSpeed, scrollSpeed * 2);
+    float yVelocity = clampf(_playerShip.physicsBody.velocity.y, -1.4 * scrollSpeed, scrollSpeed * 2);
     _playerShip.physicsBody.velocity = ccp(0, yVelocity);
     
     // spawn enemy ships after previous enemies leaves the screen
