@@ -19,6 +19,8 @@ static const CGFloat distanceBetweenEnemies = 300.f;
     CCNode *_ocean2;
     NSArray *_oceans;
     NSMutableArray *_enemyShips;
+    NSInteger _score;
+    CCLabelTTF *_scoreLabel;
 }
 
 - (void)spawnEnemyShip {
@@ -88,6 +90,10 @@ static const CGFloat distanceBetweenEnemies = 300.f;
         [_enemyShips removeObject:enemyToRemove];
         // for each removed obstacle, add a new one
         [self spawnEnemyShip];
+        
+        // each enemy ship that the player survives adds to his score
+        _score++;
+        _scoreLabel.string = [NSString stringWithFormat:@"%d", _score];
     }
 }
 @end
