@@ -1,5 +1,8 @@
 # Rocket Boat!
-![](http://i6.minus.com/ilhpLNPG9Oshx.png)
+![Enticing Intro Screen](http://i6.minus.com/ilhpLNPG9Oshx.png)
+
+![Gameplay](http://i4.minus.com/iSlVV63zuMo8Q.png)
+
 ## Overview
 
 A top down scroller where you command a boat.  
