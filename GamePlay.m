@@ -95,5 +95,11 @@ static const CGFloat distanceBetweenEnemies = 300.f;
         _score++;
         _scoreLabel.string = [NSString stringWithFormat:@"%d", _score];
     }
+    // end game if player's ship has gone off the edge of the bottom of the screen, into the fire
+    CGPoint playerShipWorldPosition = [_physicsNode convertToWorldSpace:_playerShip.position];
+    CGPoint playerShipScreenPosition = [self convertToNodeSpace:playerShipWorldPosition];
+    if (playerShipScreenPosition.y < -50) {
+        NSLog(@"GAME OVER");
+    }
 }
 @end

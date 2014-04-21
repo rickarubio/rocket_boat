@@ -59,8 +59,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.0</real>
-									<real>0.0</real>
+									<real>64</real>
+									<real>183</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -89,6 +89,14 @@
 									<false/>
 									<integer>0</integer>
 								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>rotation</string>
+								<key>type</key>
+								<string>Degrees</string>
+								<key>value</key>
+								<real>-180</real>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -207,7 +215,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>31</real>
+									<real>39</real>
 									<real>166</real>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -246,7 +254,7 @@
 								<key>type</key>
 								<string>Degrees</string>
 								<key>value</key>
-								<real>-147.30000305175781</real>
+								<real>-147.31927490234375</real>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -273,8 +281,6 @@
 								</array>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 						<key>seqExpanded</key>
 						<true/>
 					</dict>
@@ -369,8 +375,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>33</real>
-									<real>124</real>
+									<real>51</real>
+									<real>122</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -383,8 +389,8 @@
 								<string>Point</string>
 								<key>value</key>
 								<array>
-									<real>0.46676608920097351</real>
-									<real>0.52185547351837158</real>
+									<real>0.41892877221107483</real>
+									<real>0.49733027815818787</real>
 								</array>
 							</dict>
 							<dict>
@@ -529,8 +535,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>29</real>
-									<real>57</real>
+									<real>30</real>
+									<real>46</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -543,8 +549,8 @@
 								<string>Point</string>
 								<key>value</key>
 								<array>
-									<real>0.47147879004478455</real>
-									<real>0.53215324878692627</real>
+									<real>0.57493728399276733</real>
+									<real>0.50319755077362061</real>
 								</array>
 							</dict>
 							<dict>
@@ -568,7 +574,7 @@
 								<key>type</key>
 								<string>Degrees</string>
 								<key>value</key>
-								<real>-153</real>
+								<real>-152.98251342773438</real>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -815,7 +821,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>2</real>
+			<real>0.0</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
