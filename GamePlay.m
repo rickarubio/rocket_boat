@@ -8,7 +8,7 @@
 
 #import "GamePlay.h"
 
-static const CGFloat scrollSpeed = 50.f;
+static CGFloat scrollSpeed = 50.f;
 static CGFloat firstEnemyYPosition = 0.f;
 static const CGFloat distanceBetweenEnemies = 300.f;
 
@@ -21,6 +21,7 @@ static const CGFloat distanceBetweenEnemies = 300.f;
     NSMutableArray *_enemyShips;
     NSInteger _score;
     CCLabelTTF *_scoreLabel;
+    CCButton *_restartButton;
 }
 
 - (void)spawnEnemyShip {
@@ -60,7 +61,7 @@ static const CGFloat distanceBetweenEnemies = 300.f;
     for (CCNode *ocean in _oceans) {
         CGPoint oceanWorldPosition = [_physicsNode convertToWorldSpace:ocean.position];
         CGPoint oceanScreenPosition = [self convertToNodeSpace:oceanWorldPosition];
-        // NSLog(@"ocean Y-coord = %f", oceanScreenPosition.y);
+//        NSLog(@"ocean Y-coord = %f", oceanScreenPosition.y);
         if (oceanScreenPosition.y <= -1 * ocean.contentSize.height) {
             ocean.position = ccp(0, ocean.position.y + (2 * ocean.contentSize.height));
         }
@@ -99,7 +100,17 @@ static const CGFloat distanceBetweenEnemies = 300.f;
     CGPoint playerShipWorldPosition = [_physicsNode convertToWorldSpace:_playerShip.position];
     CGPoint playerShipScreenPosition = [self convertToNodeSpace:playerShipWorldPosition];
     if (playerShipScreenPosition.y < -50) {
-        NSLog(@"GAME OVER");
+        [self gameOver];
     }
 }
+
+- (void) gameOver {
+    _restartButton.visible = true;
+}
+
+- (void) restartGame {
+    CCScene *gameplayScene = [CCBReader loadAsScene:@"GamePlay"];
+    [[CCDirector sharedDirector] replaceScene: gameplayScene];
+}
+
 @end

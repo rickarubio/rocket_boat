@@ -7,6 +7,14 @@ Dodge the rockets and survive as long as you can.
 
 Built for the MakeGamesWithUS Game Development Hackathon, hosted by Apportable April 19th 2014 - April 20th 2014 in San Francisco, CA.
 
+## Pending Implementation (feel free to contribute!)
+- Enemies fire projectiles
+- Collision detection between projectiles and playerShip
+- Swipe left to fire projectiles from playerShip
+
+## Known Bugs
+- After you lose the game, when you tap on restart, no more enemy ships will spawn.  
+
 ## Resources
 [MakeGamesWithUs](https://www.makegameswith.us/home/)  
 
